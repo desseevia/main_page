@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главный экран</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" type="text/css"  rel="stylesheet">
+    <link href="../local/templates/td-germes/css/font.css@16179742121093.css" type="text/css"  data-template-style="true"  rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Шапка -->
+    <header class="header header_main">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-inner">
+                    <div class="row align-items-center">
+                        <div class="header-col_logo col-auto">
+                            <div class="header-logo">
+                                <a href="#">
+                                    <img class="header-logo-img" src="img/germes_logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-col_menu col">
+                            <div class="d-none d-lg-block">
+                                <ul class="header-menu d-lg-flex align-items-lg-center justify-content-lg-between">
+                                    <li class="header-menu-item"><a href="#uslugi" class="header-menu-item-link">Услуги</a>
+                                    </li>
+                                    <li class="header-menu-item"><a href="#" class="header-menu-item-link">Доставка</a>
+                                    </li>
+                                    <li class="header-menu-item"><a href="#" class="header-menu-item-link">Оплата</a>
+                                    </li>
+                                    <li class="header-menu-item"><a href="#projects" class="header-menu-item-link">Проекты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-col_shop col-auto d-none d-lg-block">
+                            <div class="header-shop">
+                                <div class="header-shop-inner d-flex align-items-center justify-content-lg-between">
+                                    <a href="#"
+                                        class="header-shop-btn header-shop-btn_favorites d-flex align-items-center">
+                                        <span class="header-shop-btn-icon"></span>
+                                        <span class="header-shop-btn-title d-lg-none">Избранное</span>
+                                    </a>
+                                    <a href="#" class="header-shop-btn header-shop-btn_cart d-flex align-items-center">
+                                        <span class="header-shop-btn-icon"></span>
+                                        <span class="header-shop-btn-title d-lg-none">Корзина</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-col_contact col-auto">
+                            <div class="header-contact">
+                                <div class="header-contact-phone">
+                                    <a href="#" class="header-contact-phone-link mgo_number">8 (843) 203-93-43</a>
+                                </div>
+                                <div class="header-contact-callback d-none d-lg-block">
+                                    <a href="#" class="header-contact-callback-link">заказать обратный звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-col_open_nav col-auto d-lg-none">
+                            <a class="header-open_nav" href="#" title="Навигация"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="container">
+                <div class="header-nav-outer">
+                    <div class="header-nav-inner d-table d-lg-flex align-items-lg-center justify-content-lg-between">
+						<div class="header-nav-item header-nav-item_catalog">
+							<a class="header-nav-item-catalog" href="#">Каталог <span class="d-lg-none">товаров</span></a>
+						</div>
+                        <div class="header-nav-item header-nav-item_action">
+                            <a href="#" class="header-nav-item-action"><b>Акции</b></a>
+                        </div>
+                        <div class="header-nav-item d-none d-lg-block">
+                            <form class="header-search" action="#">
+                                <input type="text" name="q" class="header-search-input" value="" placeholder="Введите название товара">
+                                <label class="header-search-button" for="search-submit" title="Найти">
+                                    <input id="search-submit" type="submit" value="Найти" hidden>
+                                </label>
+                            </form>
+                        </div>
+                        <div class="header-nav-item header-nav-item_link">
+                            <a href="https://desseevia.github.io/company-about/" class="header-nav-item-link"><b>О компании</b></a>
+                        </div>
+                        <div class="header-nav-item header-nav-item_link">
+							<a href="#contacts" class="header-nav-item-link"><b>Контакты</b></a>
+                        </div>
+                        <div class="header-nav-item d-none d-lg-block">
+                            <a href="#" class="header-nav-item-order">Оптовый заказ</a>
+                        </div>
+                        <div class="header-nav-item header-nav-item_btn_search d-lg-none">
+                            <a href="#" class="header-nav-item-search"></a>
+                        </div>
+                    </div>
+                    <div class="header-search-mobile d-lg-none">
+                        <form class="header-search">
+                            <input type="text" name="q" class="header-search-input" value="" placeholder="Введите название товара">
+                            <label class="header-search-button">
+                                <input type="submit" value="Найти" hidden>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!-- Выпадающий список -->
+
+    <section class="offer">
+		<div class="container">
+			<div class="row">
+				<div class="d-none d-lg-block col-auto offer-col_groups" id="catalog-menu" style="display: none;">
+					<ul class="groups">
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Стеновые материалы</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Фасадные материалы</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Строительные блоки</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Отделочные материалы</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Сухие смеси</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Благоустройство</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Лако-красочные материалы</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level" href="#">Прочие услуги</a>
+						</li>
+						<li class="groups-item">
+							<a class="groups-item-link groups-item-link_level groups-item-link_sale" href="#">Распродажа товаров</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Баннер -->
+
+				<div class="col-auto offer-col_slider">
+					<div class="slider">
+						<div class="slider-item slider-item_product d-flex align-items-center owl">
+							<div class="slider-product d-flex align-items-center">
+								<div class="slider-item-inner">
+									<div class="slider">
+										<span class="slider-product-title-link">Кирпич облицовочный M95 Воткинский</span>
+									</div>
+									<div class="slider-product-main">
+										<div class="slider-product-info">
+											<span>Кол-во на поддоне, шт. - 297</span><br>
+											<span>Формат одинарный</span>
+											<div class="slider-product-info-group">
+												<u class="slider-product-info-delivery">бесплатная доставка</u>
+												<u class="slider-product-info-delivery">в наличии</u>
+											</div>
+											<u class="slider-product-info-price">4500<span class="slider-product-info-price-unit"> ₽ / шт</span></u>
+										</div>																										
+									</div>
+									<div class="item-action d-flex">
+										<a href="#" class="item-click btn1 btn_small1" data-field="">Купить в 1 клик</a>
+										<a href="#" class="item-buy1 d-none d-md-block" title="В корзину"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<!-- Под домом -->
+
+				<div class="col offer-col_priveleges">
+				    <div class="privileges">
+		                <div class="row align-items-center">
+                            <div class="col-6 col-md-3">
+				                <div class="privileges-item d-flex align-items-center">
+								<img src="img/ambulance.svg" alt=""  class="privileges-item-icon">
+                                Доставка стройматериалов и аренда спецтехники				
+							    </div>
+				            </div>
+                            <div class="col-6 col-md-3">
+				                <div class="privileges-item d-flex align-items-center">
+									<img src="img/percent.svg" alt=""  class="privileges-item-icon">
+                                Скидки застройщикам и  оптовикам				
+							    </div>
+				            </div>
+                            <div class="col-6 col-md-3">
+				                <div class="privileges-item d-flex align-items-center">
+								<img src="img/Vector(1).svg" alt=""  class="privileges-item-icon">
+                                Предлагаем лучшую цену			
+							    </div>
+				            </div>
+                            <div class="col-6 col-md-3">
+				                <div class="privileges-item d-flex align-items-center">
+                                <img src="img/Works.svg" alt="Работаем 7 дней в неделю" class="privileges-item-icon">
+                                Работаем 7 дней в неделю				
+							    </div>
+				            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Кирпичи -->
+
+	<section class="section main_specials">
+		<div class="container">
+			<div class="section-top">
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="section-title">Спецпредложения</div>
+					</div>
+					<div class="d-none d-lg-block col-auto">
+						<a class="section-link section-link_sale" href="#">Перейти в раздел скидок</a>
+					</div>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="items">
+						<!-- Первый верх -->
+					<div class="item">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+							<a href="#"> 
+								<img src="img/1.png" alt="" class="item-img-self"> 
+							</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>		
+					<!-- Второй верх -->								
+					<div class="item">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					        </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>	
+					<!-- Третий верх -->	
+					<div class="item item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					        </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>	
+					<!-- Четвертый верх -->			
+					<div class="item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					        </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>		
+					<!-- Пятый верх -->								
+					<div class="item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					        </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>													
+					<!-- Первый низ -->
+					<div class="item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич полнотелый M125 Чебоксарский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>		
+					<!-- Второй низ -->
+					<div class="item2 item3" id="bx_3966226736_13670">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component3.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М95 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>		
+					<!-- Третий низ -->
+					<div class="item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="javascript:void(0)" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component4.svg" alt="" width="132" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич рядовой M95 Александровский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>	
+					<!-- Четвертый низ -->
+					
+					<div class="item1 item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component5.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич облицовочный М75 Воткинский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>											
+					
+					<!-- Пятый низ -->
+					<div class="item1 item2 item3">
+						<div class="item-top">
+		                    <div class="item-btns d-none d-md-block">
+			                    <a href="#" class="item-btn item-btn_favorite"></a>
+		                    </div>
+							<img class="or" src="img/Component2.svg" alt="" width="109" height="23">
+		                    <div class="item-img">
+								<a href="#"> 
+									<img src="img/1.png" width="145" height="86" alt="" class="item-img-self"> 
+								</a>
+					    </div>
+			            </div>
+                        <div class="item-main">
+		                <div class="item-main-top">
+			                <div class="item-title">
+				                <a href="#">Кирпич полнотелый M125 Чебоксарский</a>
+                            </div>
+							<div class="item-product-info">
+								<span>Кол-во на поддоне, шт. - 297</span><br>
+								<span>Формат одинарный</span>
+								<div class="item-product-info-group">
+									<u class="item-product-info-delivery">бесплатная доставка</u>
+									<u class="item-product-info-delivery">в наличии</u>
+								</div>
+							</div>
+		                </div>
+						<div class="item-main-bottom">
+					    <div class="item-price">
+			                <div class="item-price-item">
+			                <span class="item-price-value">4 500</span>
+			                <span class="item-price-currency">₽</span><span class="item-price-measure">/шт</span>	
+						    </div>
+	                    </div>					
+						<div class="item-action d-flex">
+						    <a href="#" class="item-click btn btn_small">Купить в 1 клик</a>
+						    <a href="#" class="item-buy d-none d-md-block" title="В корзину"></a>
+					    </div>
+				        </div>
+						</div>
+                    </div>								
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Проекты -->
+
+<section class="section" id="projects">
+	<div class="container">
+		<div class="section-top">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="section-title">Проекты из наших стройматериалов</div>
+				</div>
+				<div class="d-none d-lg-block col-auto">
+					<a class="section-link" href="#">Смотреть все проекты</a>
+				</div>
+			</div>
+		</div>
+		<!-- Первый -->
+		<div class="section-content">
+			<div class="projects">
+				<div class="row">
+				<div class="projects-item-col col-6 col-md-4">
+	                <div class="projects-item" data-bg="img/SAN_2815.jpg">
+		                <div class="projects-item-over d-flex align-items-center">
+			                <div class="projects-item-inner">
+				                <div class="projects-item-title">Торгово-офисный центр</div>
+				                <div class="projects-item-anounce d-none d-md-block"></div>
+				            <div class="projects-item-action">
+					            <a href="#" class="projects-item-btn btn btn_small btn_transparent btn_fix">Перейти к объекту</a>
+				            </div>
+			                </div>
+		                </div>
+	                </div>
+                </div>	
+
+				<!-- Второй -->		
+
+				<div class="projects-item-col col-6 col-md-4">
+	                <div class="projects-item" data-bg="img/51-1.jpg">
+		                <div class="projects-item-over d-flex align-items-center">
+			                <div class="projects-item-inner">
+				                <div class="projects-item-title">Аэропорт Казань</div>
+				                <div class="projects-item-anounce d-none d-md-block">Комплекс услуг по доставке товара на Ваш строительный объект. Комплекс услуг по доставке.</div>
+				           <div class="projects-item-action">
+					            <a href="#" class="projects-item-btn btn btn_small btn_transparent btn_fix">Перейти к объекту</a>
+				           </div>
+			               </div>
+		                </div>
+	                </div>
+                </div>												
+				
+				<!-- Третий -->		
+
+				<div class="projects-item-col col-6 col-md-4">
+	                <div class="projects-item" data-bg="img/SAN_3519.jpg">
+		                <div class="projects-item-over d-flex align-items-center">
+			                <div class="projects-item-inner">
+				                <div class="projects-item-title">Жилой дом</div> 
+				            <div class="projects-item-action">
+					            <a href="#" class="projects-item-btn btn btn_small btn_transparent btn_fix">Перейти к объекту</a>
+				            </div>
+			                </div>
+		                </div>
+	                </div>
+                </div>	
+
+				<!-- Четвертый -->		
+
+				<div class="projects-item-col col-6 col-md-4 d-none">
+	                <div class="projects-item" data-bg="img/SAN_3519.jpg">
+		                <div class="projects-item-over d-flex align-items-center">
+			                <div class="projects-item-inner">
+				                <div class="projects-item-title">Жилой дом</div> 
+				            <div class="projects-item-action">
+					            <a href="#" class="projects-item-btn btn btn_small btn_transparent btn_fix">Перейти к объекту</a>
+				            </div>
+			                </div>
+		                </div>
+	                </div>
+                </div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>    
+<!-- Услуги -->		
+<section class="d-none d-md-block section" id="uslugi">
+		<div class="container">
+			<div class="section-top">
+				<div class="section-title">Дополнительные услуги</div>
+			</div>
+			<div class="section-content">
+				<div class="services">
+					<div class="row">
+						<!-- Первая карточка -->		
+						<div class="col-4 col-xl-3">
+							<a href="#" class="services-item">
+							    <div class="services-item-icon"> 
+									<img class="services-item-icon-img img1" src="img/Icons1.svg" alt=""> 
+								</div>								
+								<div class="services-item-title">Доставка стройматериалов </div>
+								<div class="services-item-anounce">
+                                    Комплекс услуг по доставке товара на Ваш строительный объект
+                                </div>
+							</a>
+						</div>
+						<!-- Вторая карточка -->
+						<div class="col-4 col-xl-3" >
+							<a href="#" class="services-item">
+							    <div class="services-item-icon"> 
+									<img class="services-item-icon-img img2" src="img/Icons2.svg" alt=""> 
+								</div>	
+								<div class="services-item-title">Шеф-монтаж</div>
+								<div class="services-item-anounce">
+                                    Демонстрация секретов успешного строительства
+                                </div>
+							</a>
+						</div>
+						<!-- Третья карточка -->
+						<div class="col-4 col-xl-3">
+							<a href="#" class="services-item">
+							    <div class="services-item-icon"> 
+									<img class="services-item-icon-img img3" src="img/Icons3.svg" alt=""> 
+								</div>	
+								<div class="services-item-title">Кладка кирпича</div>
+								<div class="services-item-anounce">
+									Кладка кирпича и блоков Pototherm
+                                </div>
+							</a>
+						</div>	
+						<!-- Четвертая карточка -->
+						<div class="col-4 col-xl-3">
+							<a href="#" class="services-item1">
+							    <div class="services-item-icon"> 
+									<img class="services-item-icon-img img4" src="img/Icons4.svg" alt=""> 
+								</div>	
+								<div class="services-item-title">Сезонное хранение</div>
+								<div class="services-item-anounce">
+									Хранение стройматериалов приобретенных зимой
+                                </div>
+							</a>
+						</div>															
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Шоурум-->	
+    <section class="section">
+		<div class="container">
+			<div class="section-top">
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="section-title">Наш шоурум</div>
+					</div>
+					<div class="d-none d-lg-block col-auto">
+						<a class="section-link" href="#">Перейти в контакты</a>
+					</div>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="showrooms">
+					<div class="row">
+						<div class="showrooms-item-col col-sm-6 col-md-4">
+							<a class="showrooms-item" href="#"> 
+								<img src="img/Шоурум1.svg" alt="Шоурум 1" class="showrooms-item-img" width="440" height="295"> 
+							</a>
+						</div>
+						<div class="showrooms-item-col col-sm-6 col-md-4">
+							<a class="showrooms-item" href="#"> 
+								<img src="img/Шоурум2.svg" alt="Шоурум 2" class="showrooms-item-img" width="440" height="295"> 
+							</a>
+						</div>
+						<div class="showrooms-item-col col-sm-6 col-md-4">
+							<a class="showrooms-item" href="#"> 
+								<img src="img/Шоурум3.svg" alt="Шоурум 3" class="showrooms-item-img" width="440" height="295"> 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!--Карусель-->	
+<section>
+	<div class="carousel">
+		<img src="img/Group181.svg" alt="Карусель">
+	</div>
+</section>	
+
+<!--Подвал-->	
+
+<footer class="footer" id="contacts">
+	<div class="footer-top">
+		<div class="container">
+			<div class="d-none d-lg-flex row align-items-center">
+				<div class="col">
+					<div class="row">
+						<div class="col-3">
+							<div class="footer-nav">
+								<div class="footer-nav-title">Организация</div>
+								<ul class="footer-nav-menu">
+									<li class="footer-nav-menu-item">
+										<a href="https://desseevia.github.io/company-about/" class="selected">О компании</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Услуги</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="https://desseevia.github.io/article/" class="selected">Статьи</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Вакансии</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Отзывы</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="footer-nav">
+								<div class="footer-nav-title">Как купить</div>
+								<ul class="footer-nav-menu">
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Доставка</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Оплата</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Проекты</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="selected">Контакты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="footer-nav">
+								<div class="footer-nav-title">Мы на связи</div>
+								<ul class="footer-nav-menu">
+									<li class="footer-nav-menu-item">
+										<a href="#" class="footer-tel mgo_number">8 (843)203-93-43</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a href="#" class="footer-email">info@td-germes.ru</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a class="footer-social footer-social_whatsapp" href="#"></a>
+										<a class="footer-social footer-social_telegram" href="#"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="footer-nav">
+								<div class="footer-nav-title">Наш адрес</div>
+								<ul class="footer-nav-menu">
+									<li class="footer-nav-menu-item">
+										<span class="footer-city">Казань</span>
+									</li>
+									<li class="footer-nav-menu-item">
+										<a class="footer-address" href="#">ул. Сары Садыковой 30, 2 этаж</a>
+									</li>
+									<li class="footer-nav-menu-item">
+										<span class="footer-worktime">Пн - Пт c 8:30 до 17:30 <br>Суббота с 9:00 до 14:00</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-col_order col-auto">
+					<div class="footer-order">
+						<a href="#" class="btn btn_fix footer-order-btn">Оптовый заказ</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-lg-none">
+				<ul class="footer-nav-menu">
+					<li class="footer-nav-menu-item">
+						<a href="#" class="footer-tel mgo_number">8 (843) 203-93-43</a>
+						<a href="#" class="footer-email">info@td-germes.ru</a>
+					</li>
+					<li class="footer-nav-menu-item footer-nav-menu-item_map">
+						<span class="footer-city">Казань</span><br>
+						<a class="footer-address" href="#">ул. Сары Садыковой 30, 2 этаж</a>
+					</li>
+					<li class="footer-nav-menu-item">
+						<a class="footer-question" href="#">- задайте вопрос</a>
+					</li>
+					<li class="footer-nav-menu-item">
+						<a class="footer-callback d-flex align-items-center justify-content-center" href="#">
+							<span class="footer-callback-title">Заказать обратный звонок</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="footer-copyright">
+						© 2012 — 2024, ООО «ТК «Гермес»
+						<br>
+						Сайт <a href="#">https://td-germes.ru/</a> носит исключительно
+						информационный характер и ни при каких условиях не является публичной офертой.<br>
+						Для получения информации о стоимости и наличии товаров, пожалуйста, обращайтесь в отдел
+						продаж компании Гермес.<br>
+						</div>
+				</div>
+				<div class="d-none d-lg-block col-auto">
+					<div class="footer-paysystems">
+						<div class="row align-items-end">
+							<div class="col-auto">
+								<img src="img/logos_visaelectron.svg" class="footer-paysystems-item" width="119" height="53" alt="Visa">
+							</div>
+							<div class="col-auto">
+								<img src="img/logos_mastercard.svg" class="footer-paysystems-item" width="67" height="53" alt="Mastercard">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--Для картинок-->	
+<script>
+	const projectsItems = document.querySelectorAll('.projects-item');
+	projectsItems.forEach(item => {
+	  const imagePath = item.getAttribute('data-bg');
+	  if (imagePath) {
+		item.style.backgroundImage = `url(${imagePath})`;
+	  }
+	});
+	</script>
+
+
+</body>
+</html>
